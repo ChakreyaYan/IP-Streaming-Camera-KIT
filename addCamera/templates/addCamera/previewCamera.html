@@ -1,0 +1,7 @@
+{% extends "addCamera/index.html" %}
+{% block content %}
+  {% for camObj in camObjs %}
+    <img  src="{% url 'video_streamer' camPK=camObj.id %}" width="300px" height="300px"/>
+    <h1> {{ camObj.name }}</h1>
+  {% endfor %}
+{% endblock %}

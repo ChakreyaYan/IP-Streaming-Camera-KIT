@@ -1,0 +1,24 @@
+{% extends "addCamera/index.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form class="second3" action="{% url 'insertCamera'%}" method="POST">
+                   {% csrf_token %}
+                   IP Camera :<br>
+                   <input type="text" name="ip" style="color:red;" ><br><br>
+                   Camera Name : <br>
+                   <input type="text" name="name" style="margin-top:6px;" ><br><br>
+                   username :<br>
+                   <input type="text" name="auth_uname" style="color:red;" ><br><br>
+                    password :<br>
+                   <input type="password" name="auth_pwd" style="color:red;" ><br><br>
+                   <input type="submit" name="submit" value="View Camera" style="align-content: center;">
+               </form>
+  </div>
+</div>
+</body>
+</html>
+{% endblock %}

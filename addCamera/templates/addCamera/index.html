@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style>
+           body{
+               background-color: #DD0303;
+               margin: 10px 10px 10px 10px;
+           }
+
+           ul.menu {
+            width: 20%;
+            background-color: white;
+            position: absolute;
+            height: 100%;
+            right:10px;
+
+            }
+
+            ul.Notification {
+              width: 20%;
+              background-color: white;
+              position: absolute;
+              height: 100%;
+              left:10px;
+            }
+            div.second{
+                  margin: auto;
+                 width: 45%;
+
+                 background-color: blue;
+                 height: 100%;
+
+
+            }
+        p a  {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+            margin:8px 35px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            width: 150px;
+            align-items: center;
+            display: block ;
+        }
+        p a:hover:not(.active) {
+            background-color: blue;
+            color: white;
+        }
+        .fix{
+            background-color: #DCDCDC;
+            color: black ;
+            padding : 3px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .login{
+           float : end;
+        }
+
+
+       </style>
+    </head>
+    <body>
+        <center><h1 style="color:white;">Kirirom Institute of Technology</h1></center>
+        <center><h3 style="color:white;">Project: IP Streaming Camera on Virtual Reality</h3></center>
+        <p>2.   <a href="{% url  'insertCamera' %}">Add Camera here</a></p>
+
+
+        <div>
+            <ul class="menu">
+              <p class="fix">Location</p>
+                <p><a href="{% url 'insertCamera' %}">AddCamera</a></p>
+                <h3> How to add New Camera</h3>
+
+        </div>
+        <div>
+            <ul class="Notification">
+                <p class="fix">Notification</p>
+                <p><a href="{% url 'insertCamera' %}">AddCamera</a></p>
+
+
+            </ul>
+        </div>
+        <div align="center" class="second" >
+         {%  block content %}
+        {% endblock %}
+        </div>
+    </body>
+</html>
